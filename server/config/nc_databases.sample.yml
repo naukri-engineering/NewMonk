@@ -1,0 +1,23 @@
+nLogger:
+  factory: ncPdoDatabase
+  param:
+    dsn: mysql:host=127.0.0.1;port=3306;dbname=nLogger;
+    username: root
+    password: root
+    reconnect: true
+
+nLogger_cleanup:
+  factory: ncPdoDatabase
+  param:
+    dsn: mysql:host=127.0.0.1;port=3306;dbname=nLogger;
+    username: root
+    password: root
+    reconnect: true
+
+nLogger_heatmap:
+  factory: ncPdoDatabase
+  param:
+    dsn: mysql:host=127.0.0.1;port=3306;dbname=nLogger_heatmap;
+    username: root
+    password: root
+    reconnect: true

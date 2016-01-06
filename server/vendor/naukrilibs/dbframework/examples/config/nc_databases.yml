@@ -1,0 +1,22 @@
+propel_1:
+  factory:          ncPdoDatabase
+  param:
+    dsn:          mysql:host=localhost;dbname=shard1
+    username:     nitish
+    password:     nitish
+propel_2:
+  factory:          ncPdoDatabase
+  param:
+    dsn:          mysql:host=localhost;dbname=shard2
+    username:     nitish
+    password:     nitish
+propel:
+  factory:      ncMemcacheClusteredDatabase
+  param:
+    db_manager: symfony # use this only if you wanna use sfDatabaseManager
+    db_nodes: [propel_1, propel_2]
+    memcache_nodes:
+      node_1:
+        host: localhost
+        port: 11211
+    session_lifetime: 36

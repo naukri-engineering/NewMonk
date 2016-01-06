@@ -1,0 +1,28 @@
+# Uncomment the configuration in this file and replace it by your own values wherever needed
+
+middlewares:
+#  myExampleMiddleware1:
+#    class: NewMonk\lib\error\log\middleware\MyExampleMiddleware
+#    parameters:
+#      param1:
+#        someKey: someValue
+#      param2:
+#        anotherKey: anotherValue
+
+# SLA values for sending out Slack alerts in case of error threshold breach
+sla:
+  global:
+    sla:
+      breachInterval: 2m
+      allowedBreachCount: 0
+
+#  2: # appId
+#    contact:
+#      slack:
+#        webhookUrl: https://hooks.slack.com/services/your-slack-webhook-url # see https://api.slack.com/incoming-webhooks
+#        channel: '#your-slack-channel-name'
+#      email:
+#        to: [me@example.com]
+#    sla:
+#      breachInterval: 4h
+#      errorCount: 10

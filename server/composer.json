@@ -1,0 +1,13 @@
+{
+    "name": "NewMonk",
+    "autoload": {
+        "psr-0": { },
+        "files": [],
+        "classmap": ["lib", "vendor/naukrilibs"]
+    },
+    "require": {
+        "league/booboo": "1.0.0",
+        "ruflin/elastica": "2.3.1",
+        "defuse/php-encryption": "1.2.1"
+    }
+}

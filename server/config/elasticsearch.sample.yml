@@ -1,0 +1,5 @@
+newmonk_error:
+  host: 127.0.0.1
+  port: 9200
+  index: newmonk_error
+  type: error

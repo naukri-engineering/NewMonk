@@ -1,0 +1,12 @@
+parameters:
+  error_queue:
+    name: error_queue
+    prefix: newmonk:eq:
+    cacheEngine: PHPRedis
+    createNew: true
+    dataType: list
+    ttl: 604800
+    automatic_serialization: true
+    custom.params:
+      servers:
+          - {host: 127.0.0.1, port: 6379, weight: 0}

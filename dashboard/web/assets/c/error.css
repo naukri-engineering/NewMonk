@@ -1,0 +1,110 @@
+body, ul, li, form, div, dl, dt, dd, ol, h1, h2, h3, h4, h5, h6, pre, fieldset, input, textarea, select, p, blockquote, th, acronym { padding: 0; margin: 0; font-family: Arial, Helvetica, sans-serif; color: #444; }
+
+body, li, div, dl, dt, dd, pre, input, textarea, select, p, td { font-size: 12px; }
+
+button { padding: 0; margin: 0; background: transparent; border: 0; }
+
+em { font-style: normal; }
+
+a { color: #00f; text-decoration: none; }
+
+caption, th { text-align: left; }
+
+ul { list-style: none; }
+
+fieldset, img { border: 0; }
+
+.cl { clear: both; height: 1px; overflow: hidden; }
+
+.txtC { text-align: center; }
+
+.gryTxt { color: #d9d9d9; }
+
+.posR { position: relative; }
+
+.footer { padding: 5px 0px; text-align: center; color: #d9d9d9; }
+
+/*Sprite*/
+.errBg, .spr { background: url(../images/errCbg.png) 0 0 repeat-x; }
+
+.errCnt { background: url(../images/errCnt.png) 0 0 no-repeat; overflow: hidden; margin: auto; }
+
+.errType, a.home, a.prevP { background: url(../images/errIc.png) 0 0 no-repeat; }
+
+body { background: #084b79 url(../images/err_bg.png) repeat-x; }
+
+.wrapper { width: 795px; margin: auto; }
+
+.errCont { background: #fff; border-radius: 5px; -moz-border-radius: 5px; border: #043a5f solid 1px; margin: 50px 0 0; padding: 10px 5px; }
+
+.logoCont, .resLogoCont { padding: 20px 20px 25px; border-bottom: #dedede solid 1px; margin: 0 0 2px; }
+
+.errBg { background-position: 0 0; text-align: center; padding: 20px 0; height: 195px; }
+
+.errType { width: 301px; height: 33px; overflow: hidden; margin: 10px auto; color: #fff; font-family: "Trebuchet MS", Arial; font-size: 18px; padding: 20px 0 0; font-weight: bold; }
+
+.errType span, .resErrType span { color: #72d9ff; }
+
+.uPgrade { width: 653px; height: 87px; background: url(../images/errCntUpgrad.png) no-repeat; }
+
+.e401 { width: 120px; height: 64px; }
+
+.e403 { width: 130px; height: 64px; background-position: 0 -95px; }
+
+.e404 { width: 130px; height: 64px; background-position: 0 -177px; }
+
+.e500 { width: 132px; height: 64px; background-position: 0 -264px; }
+
+.e503 { width: 132px; height: 64px; background-position: 0 -346px; }
+
+.eLost { width: 205px; height: 64px; background-position: 0 -429px; }
+
+.spr { background-position: 0 -267px; height: 14px; background-repeat: repeat; }
+
+.lnkCont { padding: 30px 40px; }
+
+.lnkM, .resLnkM { background: #f8f8f8; border: #e1e1e1 solid 1px; border-width: 1px 0; padding: 20px 0 10px; height: 89px; }
+
+.twoCol { width: 200px; float: left; text-align: center; padding: 0 75px; }
+
+a.home { background-position: -217px -80px; width: 100px; display: block; padding: 65px 0 0; text-align: center; color: #666; font-weight: bold; font-size: 14px; margin: auto; }
+
+a.home:hover { background-position: 15px -80px; color: #079bd4; }
+
+a.prevP { background-position: -180px -165px; width: 185px; display: block; padding: 65px 0 0; text-align: center; color: #666; font-weight: bold; font-size: 14px; }
+
+a.prevP:hover { background-position: 60px -165px; color: #079bd4; }
+
+.opt { background: #fff; padding: 1px; text-align: center; width: 116px; font-size: 14px; position: relative; margin: auto; display: block; top: 10px; }
+
+.bdrL { border-left: #d0d0d0 solid 1px; }
+
+.errOpt { display: block; }
+
+/*responsice css*/
+.resErrType { display: none; background: url(../images/res_errTBg.png) 0 0 no-repeat; width: 301px; height: 33px; overflow: hidden; margin: 10px auto; color: #fff; font-family: "Trebuchet MS", Arial; font-size: 18px; padding: 20px 0 0; font-weight: bold; }
+
+.resErrCnt { display: none; background: url(../images/resErrCnt.png) 0 0 no-repeat; overflow: hidden; margin: auto; }
+
+.resBottom { display: none; border-top: 2px solid #DEDEDE; margin: 0 0 2px; padding: 40px 20px 48px; }
+
+.resLogoCont { border-bottom: 2px solid #DEDEDE; }
+
+.resLink { display: none; margin: 13px 0 0 0; }
+
+.resLogoCont, .resBottom { display: none; background: url("../images/gradient.png") repeat scroll 0 0 transparent; }
+
+/*Media Queries*/
+@media screen and (max-width: 953px) { .logoCont, .errType, .errCnt, .spr, .errOpt, .uPgrade { display: none; }
+  .resLogoAnchor { margin-left: -18px; }
+  .resLogoCont, .resErrType, .resErrCnt, .resBottom, .resLink { display: block; }
+  .wrapper { width: auto; }
+  .errCont { padding: 0; border-radius: 0; margin: 0; }
+  .resAnchor { text-decoration: underline; display: inline-block; }
+  .e401, .e403, .e404, .e500, .e503, .eLost { width: 67px; height: 35px; }
+  .e403 { background-position: 0 -57px; width: 71px; }
+  .e404 { background-position: 0 -114px; width: 71px; }
+  .e500 { background-position: 0 -171px; width: 71px; }
+  .e503 { background-position: 0 -228px; width: 71px; }
+  .eLost { background-position: 0 -285px; width: 119px; }
+  .resUpgrade { width: 295px; height: 34px; background: url(../images/upgrade-mobile.png) no-repeat 0 0 transparent; margin: auto; } }

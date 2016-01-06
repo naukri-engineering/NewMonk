@@ -1,0 +1,78 @@
+curl -XPUT 'http://localhost:9200/newmonk_error' -d '{
+    "settings": {
+        "number_of_shards": 1,
+        "number_of_replicas": 1,
+        "refresh_interval": "30s"
+    },
+    "mappings": {
+        "error": {
+            "dynamic": false,
+            "_all": {"enabled": false},
+            "_source": { "enabled": true },
+            "properties": {
+                "source": {"type": "string", "index": "not_analyzed", "doc_values": true},
+                "appId": {"type": "integer", "doc_values": true},
+                "uId": {"type": "string", "index": "not_analyzed", "doc_values": true},
+                "environment": {
+                    "type": "object",
+                    "properties": {
+                        "os": {
+                            "type": "object",
+                            "properties": {
+                                "name": {"type": "string", "index": "not_analyzed", "doc_values": true},
+                                "version": {"type": "string", "index": "not_analyzed", "doc_values": true}
+                            }
+                        },
+                        "browser": {
+                            "type": "object",
+                            "properties": {
+                                "name": {"type": "string", "index": "not_analyzed", "doc_values": true},
+                                "version": {"type": "string", "index": "not_analyzed", "doc_values": true}
+                            }
+                        },
+                        "app": {
+                            "type": "object",
+                            "properties": {
+                                "version": {"type": "string", "index": "not_analyzed", "doc_values": true}
+                            }
+                        },
+                        "device": {
+                            "type": "object",
+                            "properties": {
+                                "name": {"type": "string", "index": "not_analyzed", "doc_values": true}
+                            }
+                        },
+                        "display": {
+                            "type": "object",
+                            "properties": {
+                                "width": {"type": "string", "index": "not_analyzed", "doc_values": true},
+                                "height": {"type": "string", "index": "not_analyzed", "doc_values": true}
+                            }
+                        }
+                    }
+                },
+                "exception": {
+                    "type": "object",
+                    "properties": {
+                        "tag": {"type": "string", "index": "not_analyzed", "doc_values": true},
+                        "count": {"type": "integer", "doc_values": true},
+                        "gmtTimestamp": {"type": "date", "format":"YYYY-MM-dd HH:mm:ss", "doc_values": true},
+                        "type": {"type": "string", "index": "not_analyzed", "doc_values": true},
+                        "message": {"type": "string", "index": "not_analyzed", "doc_values": true},
+                        "code": {"type": "integer", "doc_values": true},
+                        "file": {"type": "string", "index": "not_analyzed", "doc_values": true},
+                        "line": {"type": "integer", "doc_values": true},
+                        "stackTrace": {
+                            "type": "string",
+                            "index": "not_analyzed",
+                            "doc_values": true,
+                            "fielddata": {
+                                "loading": "eager_global_ordinals"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}'

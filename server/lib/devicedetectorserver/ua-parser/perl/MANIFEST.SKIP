@@ -1,0 +1,15 @@
+^blib
+^pm_to_blib
+.*\.old$
+^Makefile$
+^\.git
+\.*tar.gz$
+\.tmp$
+\.old$
+\.bak$
+\.git.+
+^regexes\.yaml$
+^\.travis\.yml
+README\.pod
+MYMETA\.json
+MYMETA\.yml

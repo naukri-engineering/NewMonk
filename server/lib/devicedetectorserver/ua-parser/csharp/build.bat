@@ -1,0 +1,1 @@
+%SystemRoot%\Microsoft.Net\Framework\v4.0.30319\msbuild.exe build.proj /t:All

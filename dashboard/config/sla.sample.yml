@@ -1,0 +1,31 @@
+# Uncomment the configuration in this file and replace it by your own values wherever needed
+
+global:
+  contact:
+    slack:
+      webhookUrl: https://hooks.slack.com/services/your-slack-incoming-webhook-url # see https://api.slack.com/incoming-webhooks
+      channel: '#your-channel-name'
+  sla:
+    breachInterval: 24h
+    allowedBreachCount: 0
+
+#19: #app id
+#  sla:
+#    homepage: # tag / page name
+#      ttfb: 400
+#      loadTime: 2500
+#    products_listing: # another tag bane
+#      ttfb: 600
+#      loadTime: 2000
+
+#84: #another app id
+#  sla:
+#    registration:
+#      ttfb: 800
+#      loadTime: 3000
+#    search_form:
+#      ttfb: 250
+#      loadTime: 1200
+#    search_results:
+#      ttfb: 500
+#      loadTime: 3200

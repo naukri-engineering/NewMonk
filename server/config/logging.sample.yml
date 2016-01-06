@@ -1,0 +1,2 @@
+boomerang:
+  appIds: [1, 2] # appIds for which performance logging (RUM) is to be enabled

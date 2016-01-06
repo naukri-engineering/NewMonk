@@ -1,0 +1,82 @@
+README:
+- This library aims to provide an implementation of different type of caches.
+  Currently supported caches are Memcache and Redis.
+
+FEATURES:
+- This cache liberary is controlled through single config file. If anyone wants to use Memcache in one part
+ of application and Redis in another part, just change the CacheEngine i.e. Memcache to Redis or vice versa.
+- Light weight cache clients are used in both caches, memcached in Memcache and phpredis in Redis.
+- Built using PHP namespaces
+
+Requirements:
+- For Memcache: PHP-5.x, memcached server, php memcached extension
+- For Redis: PHP-5.x, redis server, PHPRedisClient extension
+
+THIRDPARTY DEPENDENCIES:
+- DnsResolver
+- ncYaml
+
+HOW TO USE:
+- Checkout the following svn repo in ThirdParty:
+  http://svn.infoedge.com/newsvn/Hackathon2014Source/Done_Without_Bugs/NaukriCacheLib
+- Use the class NaukriCacheLib\CacheClientFactory;
+- This class needs a configuration "nc_caches.yml" in the following format to instantiate
+  define('NAUKRI_CACHE_CONFIG', 'APP_PATH/config/');
+
+parameters:
+  default:
+    name: default
+    prefix: test
+    cacheEngine: MemCache
+    createNew: true
+    dataType: default
+    ttl: 1000
+    automatic_serialization: true
+    custom.params:
+      servers:
+          - {host: 127.0.0.1, port: 11211, weight: 0}
+  photoicp:
+    name: photoicp
+    prefix: icp_
+    cacheEngine: MemCache
+    createNew: true
+    dataType: default
+    ttl: 1000
+    automatic_serialization: true
+    custom.params:
+      servers:
+          - {host: 127.0.0.1, port: 11211, weight: 0}
+  apply:
+    name: apply
+    prefix: al_
+    cacheEngine: PHPRedis
+    createNew: false
+    dataType: default
+    ttl: -1
+    automatic_serialization: true
+    custom.params:
+      servers:
+          - {host: 127.0.0.1, port: 6379, weight: 0}
+                                                                                                                               
+Currently Available methods:
+  public function add($key, $value); 
+    -- Add new key in the cache
+  public function addUpdate($key, $value);
+      -- Update key with value, if key exists else add new key
+  public function addUpdateMulti($items);
+      -- Add or Update multiple key value pairs in the cache like array('key1' => 'value1','key2' => 'value2')
+  public function get($key);
+      -- Get the value of key from the cache.
+  public function delete($key);
+      -- Delete a given key from the cache.
+      
+Implementation of NaukriCache Library:
+   -- Apply Revamp for ApplyQuota Checks
+   -- Recruiter Profile QuickApply for Quota Checks
+   -- PHOTOQUP Intercept Management System      
+
+
+Future Scope:
+  Providing the total functionality of Redis Cache Engine. As it can store variety of data structure types { "strings", "sets" , "list", " sorted set", "hash" }
+  Currently we have just implemented methods and data structure of Redis according the scope of Naukri usage.
+
