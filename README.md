@@ -8,7 +8,7 @@ NewMonk also displays these logs, in form of user-friendly dashboards and report
 Some of the major features provided by NewMonk are listed below:
 
 #### RUM (Real User Monitoring):
-* TTFB
+* TTFB (Time To First Byte)
 * DOM Ready Time
 * Page Ready Time
 * Page Load Time
@@ -122,7 +122,7 @@ In case you find any errors due to incompatibility with a specific version of th
 
 #### Installing
 
-Okay, I’ll be very frank. The installation process might look a bit steep right now, but be assured, you are going to end up with a very beatiful product on your hands - or your server ;-) when you are done.
+The installation process might look a bit steep right now, but be assured, you are going to end up with a very beatiful product on your hands - or your server ;-) when you are done.
 
 We are working on a one-click installation process, which will ease this process with a wizard very soon. But until then, follow along!
 
